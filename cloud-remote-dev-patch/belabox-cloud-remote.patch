@@ -1,0 +1,30 @@
+diff --git a/belaUI.js b/belaUI.js
+index 0000000..0000000 100644
+--- a/belaUI.js
++++ b/belaUI.js
+@@ -1,3 +1,15 @@
++/*
++ * BELABOX Cloud Remote Development Patch
++ * 
++ * This patch changes the remote endpoint from remote.belabox.net to 10.5.0.120
++ * for development purposes. This allows testing with a local development server
++ * instead of the production BELABOX cloud remote server.
++ * 
++ * Original endpoint: remote.belabox.net
++ * Development endpoint: 10.5.0.120
++ */
++
++
+ /*
+     belaUI - web UI for the BELABOX project
+     Copyright (C) 2020-2022 BELABOX project
+@@ -3500,7 +3512,7 @@ function handleModemConfig(conn, msg) {
+   A brief remote protocol version history:
+   1 - initial remote release
+ */
+-const remoteProtocolVersion = 14;
+-const remoteEndpointHost = 'remote.belabox.net';
++const remoteProtocolVersion = 15;
++const remoteEndpointHost = '10.5.0.120';
+ const remoteEndpointPath = '/ws/remote';
+ const remoteTimeout = 5000;
